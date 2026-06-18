@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="description" content="Site oficial da Amello Apoio Administrativo - Preparação de documentos e serviços especializados de apoio administrativo em Elias Fausto, SP." />
+  <meta property="og:description" content="Preparação de documentos e serviços especializados de apoio administrativo em Elias Fausto, SP." />
+  <meta property="og:title" content="AMELLO APOIO ADMINISTRATIVO" />
+  <meta property="og:type" content="website" />
+  <title>AMELLO APOIO ADMINISTRATIVO</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f8fa;
+      color: #1a1a2e;
+    }
+
+    /* TOP NAV */
+    .topbar {
+      background: #1a1a2e;
+      color: #fff;
+      text-align: right;
+      padding: 8px 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    .topbar a { color: #c8a96e; text-decoration: none; font-weight: 600; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px 50px;
+    }
+    .hero .brand-initial {
+      display: inline-block;
+      background: #c8a96e;
+      color: #1a1a2e;
+      font-size: 48px;
+      font-weight: 900;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      letter-spacing: -2px;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 5vw, 36px);
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .hero .cnpj-badge {
+      display: inline-block;
+      background: rgba(200,169,110,0.15);
+      border: 1px solid #c8a96e;
+      color: #c8a96e;
+      padding: 5px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .hero .missao {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #e0e0e0;
+    }
+    .hero .missao strong { color: #c8a96e; }
+    .hero .contact-line {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+    .hero .contact-line a { color: #c8a96e; text-decoration: none; }
+    .btn-insta {
+      display: inline-block;
+      background: transparent;
+      border: 2px solid #c8a96e;
+      color: #c8a96e;
+      padding: 9px 28px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-insta:hover { background: #c8a96e; color: #1a1a2e; }
+
+    /* SECTIONS */
+    .section {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .section h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f3460;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #c8a96e;
+    }
+    .section p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #333;
+    }
+    .section p strong { color: #0f3460; }
+
+    /* PRODUCT LIST */
+    .product-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+    .product-list li {
+      background: #fff;
+      border-left: 4px solid #c8a96e;
+      padding: 12px 18px;
+      margin-bottom: 10px;
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
+      color: #1a1a2e;
+      font-weight: 500;
+    }
+
+    /* TABLE */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .info-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8e8e8;
+      vertical-align: top;
+    }
+    .info-table tr:last-child td { border-bottom: none; }
+    .info-table td:first-child {
+      font-weight: 700;
+      color: #0f3460;
+      width: 45%;
+      background: #f0f4ff;
+    }
+    .info-table td:last-child {
+      background: #fff;
+      color: #333;
+    }
+
+    /* CTA WHATSAPP */
+    .cta-section {
+      text-align: center;
+      padding: 30px 20px 40px;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 16px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(37,211,102,0.4);
+    }
+
+    /* PRIVACY */
+    .privacy {
+      background: #fff;
+      border-top: 3px solid #c8a96e;
+    }
+    .privacy h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f3460;
+      margin: 22px 0 10px;
+    }
+    .privacy p, .privacy li {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #444;
+    }
+    .privacy ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+    .privacy ul li { margin-bottom: 4px; }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+    footer strong { color: #c8a96e; }
+    footer .divider {
+      width: 40px;
+      height: 2px;
+      background: #c8a96e;
+      margin: 16px auto;
+    }
+
+    @media (max-width: 500px) {
+      .hero { padding: 40px 14px 36px; }
+      .info-table td:first-child { width: 50%; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="#login">LOGIN</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brand-initial">A</div>
+    <h1>AMELLO APOIO ADMINISTRATIVO</h1>
+    <div class="cnpj-badge">64.723.177/0001-07</div>
+
+    <div class="missao">
+      <strong>Nossa missão:</strong> Oferecer soluções de apoio administrativo com eficiência, organização e comprometimento, auxiliando pessoas e empresas na preparação de documentos e na gestão de processos. Atendemos com dedicação e profissionalismo em Elias Fausto e região.
+    </div>
+
+    <div class="contact-line">
+      📞 CONTATO | E-mail: <a href="mailto:contato@mellla.shop">contato@amello.com.br</a>
+    </div>
+    <a href="#" class="btn-insta">📷 INSTAGRAM</a>
+  </div>
+
+  <!-- QUEM SOMOS -->
+  <div class="section">
+    <h2>Quem Somos?</h2>
+    <p>
+      A <strong>Amello Apoio Administrativo</strong>, registrada sob o CNPJ <strong>64.723.177/0001-07</strong>, foi fundada em 26 de janeiro de 2026 por <strong>Aderval Bezerra de Mello</strong>, em Elias Fausto - SP. Com atuação focada em serviços administrativos especializados, a empresa se dedica a oferecer suporte documental e operacional de qualidade.
+    </p>
+    <br />
+    <p>
+      Localizada na Rua Reynaldo Benatti, 100, Jardim São José, Elias Fausto - SP, a Amello Apoio Administrativo oferece serviços com foco em organização, agilidade e confiabilidade. Atendemos clientes que precisam de suporte na preparação de documentos e na gestão de processos administrativos.
+    </p>
+    <br />
+    <p>
+      Optante pelo Simples Nacional desde a data de abertura, a empresa mantém compromisso com o crescimento sustentável e o melhor atendimento ao cliente.
+    </p>
+  </div>
+
+  <!-- PRODUTOS E SERVIÇOS -->
+  <div class="section" style="padding-top: 0;">
+    <h2>Serviços Disponíveis</h2>
+    <ul class="product-list">
+      <li>82.19-9-99 — Preparação de documentos e serviços especializados de apoio administrativo (atividade principal)</li>
+    </ul>
+  </div>
+
+  <!-- INFORMAÇÕES DA EMPRESA -->
+  <div class="section" style="padding-top: 0;">
+    <h2>Informações da Empresa</h2>
+    <table class="info-table">
+      <tr><td>Razão Social</td><td>Aderval Bezerra de Mello Apoio Administrativo</td></tr>
+      <tr><td>Nome Fantasia</td><td>Amello Apoio Administrativo</td></tr>
+      <tr><td>CNPJ</td><td>64.723.177/0001-07</td></tr>
+      <tr><td>Data de Abertura</td><td>26/01/2026</td></tr>
+      <tr><td>Porte</td><td>Empresa de Pequeno Porte</td></tr>
+      <tr><td>Natureza Jurídica</td><td>Empresário (Individual)</td></tr>
+      <tr><td>Opção pelo MEI</td><td>Não</td></tr>
+      <tr><td>Simples Nacional</td><td>Sim (desde 26/01/2026)</td></tr>
+      <tr><td>Situação Cadastral</td><td>Ativa</td></tr>
+      <tr><td>Data Situação Cadastral</td><td>26/01/2026</td></tr>
+      <tr><td>Tipo</td><td>Matriz</td></tr>
+      <tr><td>Capital Social</td><td>R$ 2.000,00</td></tr>
+    </table>
+  </div>
+
+  <!-- LOCALIZAÇÃO E CONTATO -->
+  <div class="section" style="padding-top: 0;">
+    <h2>Localização e Contato</h2>
+    <table class="info-table">
+      <tr><td>Logradouro</td><td>Rua Reynaldo Benatti, 100</td></tr>
+      <tr><td>Bairro</td><td>Jardim São José</td></tr>
+      <tr><td>CEP</td><td>13352-104</td></tr>
+      <tr><td>Município</td><td>Elias Fausto</td></tr>
+      <tr><td>Estado</td><td>São Paulo</td></tr>
+      <tr><td>E-mail</td><td>contato@mellla.shop</td></tr>
+    </table>
+  </div>
+
+  <!-- CNAE -->
+  <div class="section" style="padding-top: 0;">
+    <h2>Atividade CNAE</h2>
+    <table class="info-table">
+      <tr><td>Código Principal</td><td>82.19-9-99</td></tr>
+      <tr><td>Descrição</td><td>Preparação de documentos e serviços especializados de apoio administrativo não especificados anteriormente</td></tr>
+      <tr><td>Tipo</td><td>Atividade Principal</td></tr>
+    </table>
+  </div>
+
+  <!-- CTA WHATSAPP -->
+  <div class="cta-section">
+    <a href="https://wa.me/5519900000000?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-whatsapp">
+      💬 CONVERSAR AGORA
+    </a>
+  </div>
+
+  <!-- POLÍTICA DE PRIVACIDADE -->
+  <div class="privacy">
+    <div class="section">
+      <h2>Política de Privacidade</h2>
+      <p><strong>Amello Apoio Administrativo | Aderval Bezerra de Mello | CNPJ: 64.723.177/0001-07</strong><br />
+      Endereço: Rua Reynaldo Benatti, 100, Jardim São José, Elias Fausto - SP, CEP 13352-104</p>
+
+      <h3>1. Finalidade</h3>
+      <p>Esta política descreve como coletamos, utilizamos, armazenamos e protegemos os dados pessoais dos clientes, usuários e visitantes que interagem conosco por meio de nossos serviços digitais, redes sociais, e-mail, telefone ou durante a prestação de serviços.</p>
+
+      <h3>2. Dados Coletados</h3>
+      <p>Informações fornecidas voluntariamente: Nome, e-mail, telefone, endereço e dados necessários para o atendimento ou contratação de serviços. Dados técnicos e de navegação: Endereço IP, tipo de dispositivo e interações em nossos canais online, quando aplicável.</p>
+
+      <h3>3. Uso dos Dados</h3>
+      <p>Prestação dos serviços contratados e suporte ao cliente. Comunicação sobre novidades, atualizações e solicitações. Cumprimento de obrigações legais e fiscais.</p>
+
+      <h3>4. Compartilhamento de Dados</h3>
+      <p>Não comercializamos ou compartilhamos dados pessoais com terceiros para fins publicitários não autorizados. Dados podem ser compartilhados com parceiros de serviço ou com autoridades legais mediante requisição formal.</p>
+
+      <h3>5. Direitos do Titular (LGPD)</h3>
+      <p>Você tem direito a:</p>
+      <ul>
+        <li>Acessar, corrigir ou atualizar seus dados pessoais</li>
+        <li>Solicitar a exclusão dos dados</li>
+        <li>Revogar o consentimento para uso de dados</li>
+        <li>Solicitar portabilidade de dados</li>
+      </ul>
+
+      <h3>6. Segurança e Armazenamento</h3>
+      <p>Implementamos medidas técnicas e administrativas para proteger os dados contra acesso não autorizado, alteração ou destruição.</p>
+
+      <h3>7. Alterações nesta Política</h3>
+      <p>Esta política pode ser atualizada periodicamente. Alterações serão comunicadas por nossos canais oficiais.</p>
+
+      <h3>8. Contato para Privacidade</h3>
+      <p>E-mail: contato@mellla.shop<br />
+      Endereço postal: Rua Reynaldo Benatti, 100, Jardim São José, Elias Fausto - SP, CEP 13352-104</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>AMELLO APOIO ADMINISTRATIVO</strong>
+    <div class="divider"></div>
+    Razão Social: Aderval Bezerra de Mello Apoio Administrativo<br />
+    CNPJ: 64.723.177/0001-07<br />
+    Data de Abertura: 26/01/2026<br />
+    Porte: Empresa de Pequeno Porte<br />
+    Natureza Jurídica: Empresário (Individual)<br />
+    Simples Nacional: Sim (desde 26/01/2026)<br />
+    Situação Cadastral: Ativa<br />
+    Tipo: Matriz<br />
+    Capital Social: R$ 2.000,00<br />
+    CNAE Principal: 82.19-9-99 — Preparação de documentos e serviços especializados de apoio administrativo<br />
+    Endereço: Rua Reynaldo Benatti, 100, Jardim São José, Elias Fausto - SP, CEP 13352-104<br />
+    E-mail: contato@mellla.shop
+    <div class="divider"></div>
+    © 2026 Amello Apoio Administrativo — Aderval Bezerra de Mello. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
